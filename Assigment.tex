@@ -1,0 +1,67 @@
+
+Sida
+1
+av 2
+\documentclass[conference,a4paper]{IEEEtran}
+\usepackage{graphicx,caption,subfig,amsmath,array}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{refs.bib}
+\begin{document}
+\title{My Paper}
+\author{
+\IEEEauthorblockN{Author 1, Author 2}
+\IEEEauthorblockA{Dept. of Maths and Computer Science\\Karlstad University\\
+65188 KARLSTAD, Sweden}
+}
+\maketitle
+\begin{abstract}
+Skriv detta kapitel absolut sist. Det är en sammanfattning av hela uppsatsen,
+där varje del berörs. Personer som läser hundratals uppsatser i veckan begränsar
+sig ofta till abstraktet. Detta är er akademiska "sales pitch". Max 200 ord och ska
+inte innehålla referenser.
+\end{abstract}
+\section{Introduction}
+Efter att ha läst introduktionen, bör läsaren förstå varför det vetenskapliga
+bidraget i rapporten är intressant och aktuellt. Börja brett och smalna av mot ditt
+område och ditt bidrag. Introduktionen ska svara på varför läsaren överhuvudtaget
+ska läsa den, varför den är relevant, och varför området är viktigt. Början av
+introduktionen ska vem som helst kunna läsa och hänga med i, men allt eftersom ditt
+bidrag presenteras, ökar kunskapskraven.
+\section{Bakgrund}
+Läser man enbart om man inte forskar inom ämnet som läsare. Redogör för andra
+forskares arbete, och presenterar den bakgrundsinformation som krävs för att förstå
+resten av rapporten. Här ska det inte vara med några resultat, någon analys eller
+några egna reflektioner.
+\section{Analys}
+Först här får ditt ert bidrag och era egna reflektioner vara med. Förkunskaper och
+bakgrundsinformation ska däremot vara i bakgrundskapitlet.
+\section{Slutsats}
+Vad för slutsatser kan ni dra från ert arbete? Om läsaren hoppar direkt från
+abstraktet eller introduktionen till slutsatsen, så ska den röda tråden i rapporten
+vara välbehållen, och texten vara förståelig.
+\section{Exempel}
+Vanlig text med lite~\cite{biggs84} referenser~\cite{web:pox}. Innehåller även \
+texttt{texttt}, \emph{emph}, \textit{kursiv} och \textbf{fet}. Dessutom innehåller
+den lite ``citationstecken'' och punktlistor.
+\begin{itemize}
+\item Punktlista 1.
+\item Punktlista 2.
+\end{itemize}
+\begin{enumerate}
+\item Nummerlista 1.
+\item Nummerlista 2.
+\end{enumerate}
+\begin{description}
+\item[Test 1] Item 1.
+\item[Test 2] Item 2.
+\end{description}
+\subsection{En underrubrik}
+Med Figur~\ref{fig1}
+\begin{figure}
+\center
+\includegraphics[width=0.4\textwidth]{plot1.png}
+\caption{Figurtext}
+\label{fig1}
+\end{figure}
+\printbibliography
+\end{document}
