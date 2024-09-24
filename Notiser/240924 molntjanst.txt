@@ -1,0 +1,83 @@
+Molntjänster = virtualisering
+
+målet med virtualisering är att separera mjukvara, 
+vilket är userspace, kernel, driver från hårdvaran. 
+Då kan flera olika mjukvara använda samma hårdvara. 
+
+Ger en bättre resursallkoring. Färre datorer behövs. 
+Fördel datacentret blir mer dynamiskt. 
+
+Nackdelen är att man kan förlora lite i prestanda. 
+
+Fördel lättare att flytta. 
+
+Fördel Virtualisering ger en högre säkerhet. Ifall allt ligger 
+på samma dator så är de lättare för en intruder att komma
+åt andra program och data. Skärmar av intern och extern information
+
+Fördel Lättare att installera nya maskiner. 
+
+Fördel Enkelt att live-klona servrar. 
+
+Finns olika metoder att virtuellisera. 
+1- Sandboxing. Mobiltelefoner använder sig av sandboxing teknik 
+2- Network namespaces. Funktion i Linux. 
+3. Virtuella maskiner. Emulerar all hårdvara.
+* Emlurar hårdvara
+* Köra flera olika operativsystem fungerar
+* Kostar lite mer
+
+Även möjligt att virtualisera kringutrustning
+Switchar, routrar, brandväggar
+
+Prestandan med virtuella switchar och routrar så 
+finns det fortsatt problem med prestanda. 
+* färre fysiska maskiner
+* Mindre energi
+
+Migration av virtuella maskiner
+ OM man vill flytta en virtuell maskin server från en 
+ dator till en annan. 
+ EN live migration är coolt. 
+
+Då kan mna stänga av datorer som ej används till fullo. 
+
+Vad finns det för algorithmer för migrering av virtuella 
+maskiner. 
+* Utrustningen blir mer homogen med virtualisering. 
+* Lättare att se över produktions/återvinningscykeln. 
+
+Fördel: Flera företag kan dela på datacenter.
+* Gröna åtgärder på datacenter blir mer effektfulla. 
+
+* Placering av datacenter kan göras hållbart genom att
+placera datacentret på en smart plats. 
+
+CLOUD COMPUTING:
+Cloud computing leverantören brukar köras på virtualla servrar. 
+"Tjänster som tillhandshålls över internet". 
+
+IaaS: Infratructure as a service (Hyra nätverk, servrar) -> Amazon Cloud
+* Nätverk av ett antal servrar. 
+PaaS: Platform för att deploya applikationer. MAskinerna är färdiginstallerade
+Så leverantören har preppat maskinerna. - > Google apps, Microsoft Azure. 
+SaaS: Färdiga applikationer som användare använder sig av. 
+
+
+Privat moln som ligger fysiska on-site. 
+Offentliga moln hyrs in från molnleverantör. 
+Hybrid: Kombination av ovan. 
+
+Varför är virtuallisering/moln grönare
+* Datacenter är effektivt byggd och bra lokaliserade. 
+* Placeras nära grön el
+* Servrar är nära varandra. Ifall vi har många kunder i t.ex U.S.A 
+så kan servrarna placeras i U.S.A.
+* Algorthmer kan användas för att endast ha igång de fysiska maskiner som 
+används. 
+* Går att satsa, eller datacentret kan satsa på mer homgen utrusting. 
+Utrustning där förhoppnigsvis den gröna perpektivet tagits i beaktning. 
+* Mindre funktionalitet behövs läggas på klienthårdvaran. 
+
+Nackdelar kostnaden i att använda skicka saker genom internetet. 
+Nackdel när kopplingen till nätet förloras. 
