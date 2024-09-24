@@ -1,0 +1,66 @@
+CRAH unit = Computer Room Air Handler 
+
+Läsning:
+A Comprehensive Model of Data Center: From CPU to Cooling Tower
+https://ieeexplore.ieee.org/document/8489849
+* En journal som översiktligt går igenom med formler hur mycket ström som olika delar i ett datacenter drar. 
+* Finns även med hur mycket luftdrag de behöver vara etc. 
+* Var lite svår att ta in. Men kanske för att de var första läsningen.... 
+
+************************************
+Från "Lågtemperaturuppvärmning av växthus : En litteraturstudie"
+"I Boden, Sverige pågår under våren 2021 ett projekt i med att bygga växthus som värms av spillvärme från ett luftkylt datacenter."
+2020: https://www.systemair.com/sv-se/om-oss/referens/vaxthus-i-boden
+2023-10-31: https://boden.se/nyheter/2021/det-300-kvadratmeter-smarta-vaxthuset-vaxthuset-drivs-pa-spillvarme
+2023-03-23: https://www.boden.se/nyheter/2023/storskalig-vaxthusodling-i-smart-industrisymbios
+
+*************
+2014, Paper; "Supercomputers Keeping People Warm in the Winter"
+"absorb roughly 30 billion watts of electricity, or 1.3% 
+of the energy demand of the world"
+"The 
+estimated annual increase in demand on power consumption is 
+15–20% [9]"
+"Reduce the cooling costs which typically account for up to 50% 
+of the energy consumption costs"
+"There exist a number of practical data furnaces, especially 
+in Scandinavia. For example, Helsinki’s Academica has set up 
+a server that provides heating to 500 homes"
+"Dutch startup 
+Nerdalize proposed “to replace home radiators with disguised 
+computer servers and sell data processing time to remote users 
+while the excess heat warms the house for free” [15]. "
+Design Challenges 
+We had to solve five main challenges: 1) finding a 
+supercomputing system with practical operating exhaust 
+temperature ranges; 2) capturing the supercomputer’s outgoing 
+heat with minimal waste; 3) sharing the physical space between 
+the supercomputer and the industrial heat exchange system; 4) 
+finding a practical and efficient transfer system to the site of the 
+consumer; and 5) finding a valuable energy consumer that 
+could reuse the heat.
+
+****************************************
+
+Wikipedia - data centers
+On company puts tha age of datacenter to approcamity 9 years. making the equioment after this obeselete... 
+
+****************************************************
+
+2015: Cooling Systems in Data Centers: State of Art and Emerging Technologies
+Bra rapport för att lära sig om vattenbaserad och luftbaserad kylning
+"The use of the cooling system in economizer mode, generally called free cooling, is one of the most effective 
+solution to obtain energy saving [26]. It allows the use of outside favorable climate conditions for the cooling 
+process through the by-pass or partial load work of the mechanical active component resulting in energy and cost 
+savings. The geographical position of the data center in an economizer mode perspective acquires large importance 
+and can be considered an efficiency parameter."
+*
+"The simulation was based on Seoul climate data. The results 
+of the simulation showed that the air-side economizer worked for 57% of the total data center operation period, 
+while the water-side economizer for about 35%. These numbers led to an annual energy savings of 16.6% and 
+42.2%, respectively for the water-side and the air-side economizer cooling system, compared with the base cooling 
+system"
+
+
+
+
