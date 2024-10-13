@@ -1,6 +1,7 @@
 \documentclass[conference,a4paper]{IEEEtran}
 \usepackage{graphicx,caption,subfig,amsmath,array}
 \usepackage[backend=biber]{biblatex}
+\usepackage{lipsum}
 \addbibresource{refs.bib}
 \begin{document}
 \title{My Paper}
@@ -14,7 +15,7 @@
 Skriv detta kapitel absolut sist. Det är en sammanfattning av hela uppsatsen,
 där varje del berörs. Personer som läser hundratals uppsatser i veckan begränsar
 sig ofta till abstraktet. Detta är er akademiska "sales pitch". Max 200 ord och ska
-inte innehålla referenser.
+inte innehålla referenser
 \end{abstract}
 \section{Introduction}
 Efter att ha läst introduktionen, bör läsaren förstå varför det vetenskapliga
@@ -24,27 +25,39 @@ ska läsa den, varför den är relevant, och varför området är viktigt. Börj
 introduktionen ska vem som helst kunna läsa och hänga med i, men allt eftersom ditt
 bidrag presenteras, ökar kunskapskraven.
 \section{Bakgrund}
-Läser man enbart om man inte forskar inom ämnet som läsare. Redogör för andra
-forskares arbete, och presenterar den bakgrundsinformation som krävs för att förstå
-resten av rapporten. Här ska det inte vara med några resultat, någon analys eller
-några egna reflektioner.
-\section{Analys}
-Först här får ditt ert bidrag och era egna reflektioner vara med. Förkunskaper och
-bakgrundsinformation ska däremot vara i bakgrundskapitlet.
+Ett datacenter är en mängd servrar som i sig är en mängd processorkraft. När dessa processorer
+utför det arbete som servrarna är uppsatta för så skapar de värme. Denna värme kan när den uppnår
+nog höga temperaturer skada komponenter i processorn och omkringliggande komponenter. Värmen kan 
+när den blir för hög skapa förutsättningarna för eld. Elden är i sin tur eld. Dåligt.
+
+För att transportera bort den värme som skapad i processorerna behövs ett kylsystem. Till och börja med 
+ligger en kylpasta ovanför CPUn. Ovanför pastan sitter en kylfläns monterad som är konstruerad så att det
+ska finnas så stor yta som möjligt för värme att extraheras. Kylflänsen är gjord i metall som är ett bra 
+ämne för att trasnportera värme. 
+
+Efter kylflänsen har vi en monterad fläkt som 
+Sen så har vi olika system för att föra fram kyla.  
+\begin{enumerate}
+    \item Det vanligaste systemet jobbar med tillförande av kyld luft.
+    \item Sekundära i topplistan är att tillföra vatten i en kylande temperaturer
+    \item Det rekommenderade för effektivitet är att tillföra kyld 2 komponent vätska (AC-medel)
+\end{enumerate}
+
+För att kyla kyla ner de ovan nämnda element så att dessa kan kyla ned CPUn behövs en kylningsenhet 
+och transport mellan CPUn och denna kylenhet (CRAC). Kylenheten kan i sin tur ha olika teknologier för
+att kyla ner elementen. 
+    \section{Analys}
+Anledningen till att en majoritet av datacenter väljer att gå på luftkylning är för att det är billigt och 
+"enkelt". Dock så finns det många olika sätt att göra luftkylningen effektivare och dyrare vilket gör att det 
+bör finnas nån punkt där det blir billigare med vattenkylning eller tvåkomponentskylning. Eftersom effekten ska
+vara bättre med dessa kylelement så ska energiåtgången bli lägre på årsbasis vilket också ska räknas in i kalkylen. 
 \section{Slutsats}
-Vad för slutsatser kan ni dra från ert arbete? Om läsaren hoppar direkt från
-abstraktet eller introduktionen till slutsatsen, så ska den röda tråden i rapporten
-vara välbehållen, och texten vara förståelig.
-This is a reference to Antons book \cite{ref1}
+Vi får se vad jag kommer fram till efter min läsning och mina reflektioner. 
 \section{Exempel}
-Vanlig text med lite~\cite{biggs84} referenser~\cite{web:pox}. Innehåller även \
+Vanlig text med lite~\cite{energy3} referenser~\cite{web:pox}. Innehåller även \
 texttt{texttt}, \emph{emph}, \textit{kursiv} och \textbf{fet}. Dessutom innehåller
 den lite ``citationstecken'' och punktlistor.
 
-\begin{itemize}
-\item Punktlista 1.
-\item Punktlista 2.
-\end{itemize}
 \begin{enumerate}
 \item Nummerlista 1.
 \item Nummerlista 2.
@@ -54,12 +67,8 @@ den lite ``citationstecken'' och punktlistor.
 \item[Test 2] Item 2.
 \end{description}
 \subsection{En underrubrik}
-Med Figur~\ref{fig1}
-\begin{figure}
-\center
-\includegraphics[width=0.4\textwidth]{forver_alone.jpg}
-\caption{This is a man with a dream}
-\label{fig1}
-\end{figure}
+Med Figur
+\lipsum[1]
 \printbibliography
 \end{document}
+
