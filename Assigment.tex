@@ -25,28 +25,78 @@ ska läsa den, varför den är relevant, och varför området är viktigt. Börj
 introduktionen ska vem som helst kunna läsa och hänga med i, men allt eftersom ditt
 bidrag presenteras, ökar kunskapskraven.
 \section{Bakgrund}
-Ett datacenter är en mängd servrar som i sig är en mängd processorkraft. När dessa processorer
-utför det arbete som servrarna är uppsatta för så skapar de värme. Denna värme kan när den uppnår
-nog höga temperaturer skada komponenter i processorn och omkringliggande komponenter. Värmen kan 
-när den blir för hög skapa förutsättningarna för eld. Elden är i sin tur eld. Dåligt.
+Ett datacenter är en mängd servrar som i sig är en mängd processorer och hårddiskar. 
+När dessa komponenter utför det arbete som användaren utsätter dom för skapar de värme. Denna värme kan när 
+den uppnår nog höga temperaturer skada komponenter i servrarna. Värmen kan när den blir nog hög till och med
+skapa förutsättningarna för eld. referens?. Vilket skapar ytterligare ekonomisk skada, men kan även bli fara för liv. 
 
-För att transportera bort den värme som skapad i processorerna behövs ett kylsystem. Till och börja med 
-ligger en kylpasta ovanför CPUn. Ovanför pastan sitter en kylfläns monterad som är konstruerad så att det
-ska finnas så stor yta som möjligt för värme att extraheras. Kylflänsen är gjord i metall som är ett bra 
-ämne för att trasnportera värme. 
+För att transportera bort den värme som skapas i servrarna behövs ett kylsystem. Kylsystemen kan till och börja med 
+delas upp i 3 olika kategorier. Kategorierna delas upp baserat på vilket tillstånd, flytande eller gas som det kylande
+ämnet är i. 
 
-Efter kylflänsen har vi en monterad fläkt som 
-Sen så har vi olika system för att föra fram kyla.  
 \begin{enumerate}
-    \item Det vanligaste systemet jobbar med tillförande av kyld luft.
-    \item Sekundära i topplistan är att tillföra vatten i en kylande temperaturer
-    \item Det rekommenderade för effektivitet är att tillföra kyld 2 komponent vätska (AC-medel)
+    \item Luftkylning
+    \item Flytande kylning 
+    \item Tvåfaskylning
 \end{enumerate}
 
-För att kyla kyla ner de ovan nämnda element så att dessa kan kyla ned CPUn behövs en kylningsenhet 
-och transport mellan CPUn och denna kylenhet (CRAC). Kylenheten kan i sin tur ha olika teknologier för
+Det vanligaste sättet att kyla datacenter idag är via luftkylning. Det går till så att kyld luft transporteras genom servrarna 
+tack vare fläktar och gärna tunnelsystem för bättre riktad kylning. Benämning på den anläggning som sköter hanteringen av luften
+är CRAH (Computer Room Air Handling) \cite{modelling1}. Idealet är att konstruera ett datacenter där luften transporteras bort 
+den väg vi vill att den ska ta. Då det blir ett problem när den uppvärmda luften blandas med den kylda luften, då blir inte effekten
+av den kylda luften lika god. Därför finns det många olika nivåer på hur ett datacenter konstrueras för att se till att den uppvärmda
+luften transporteras bort från servrarna. \cite{modelling2} \cite{}
+
+Det andra sättet är att kyla datacentret med ett flytande element. Det flytande elementet kan vara vatten men det kan också vara ett antistatiskt ämne 
+som komponenterna inte tar skada av om det skulle få kontakt. Den flytande kylningen kan via rörledningar föras tätt intill de delar i servrarna som
+skapar mest värme. Och sen via rör ledas bort från servrarna. Använts ett antistatiskt ämne så kan hela servrarna sänkas ner i ämnet för maxial kylning. 
+
+Tvåfaskylning heter så för att det ämne som används för kylningen ändrar tillstånd från flytande till gas under kylning då det har en
+koktemperatur som understiger temperaturen på de komponenter som ska kylas. I gasform så transporteras ämnet snabbare bort till en anläggning 
+som kyle ner gasen igen och som sen transporterar ämnet åter igen till servrarna. En stor fördel med tvåkomponent är att systemet i sig skapar ett 
+högre tryck vilket gör att det är mindre beroende av pumpar än ett endast flytande system. referens?
+
+\begin{enumerate}
+    \item Luftkylt. Vilket är det vanligaste
+    \item Flytande kylning 
+    \item Tvåfaskylning
+\end{enumerate}
+
+För att kyla ner de ovan nämnda element så att dessa kan kyla ned CPUn behövs en kylningsenhet (CRAC) 
+och transport mellan CPUn och denna kylenhen. Kylenheten kan i sin tur ha olika teknologier för
 att kyla ner elementen. 
-    \section{Analys}
+
+\[P_{DC} = P_{IT} + P_{strom} + P_{kylning} + P_{ljus} \]
+
+Strömförbrukningen för ett datacenter kan delas upp i olika delar. Själva strömförbrukningen av servrarna 
+kan benämnas P\underline{IT}. Strömförbukningen av kylningsanläggningen kan benämnas P\underline{kylning}. 
+Förlorad ström i distribueringssystemet för ström kan benämnas P\underline{strom}. Sen så behöves lokaler
+där datacentret kan placeras och dessa vill vi gärna göra människovänliga med ljus och övrig teknik. Den 
+förbrukningen kan benämnas P\underline{ljus}. 
+
+För att jämföra datacentrets strömförbrukning med fokus de de komponenter som inte har med servrarnas arbete
+att göra så kan vi dela alla dessa förbrukningar med P\underline{IT}. Då får vi ut ett PUE-värde (Power usage effectiveness) \cite{modelling1}
+
+\[PUE = (P_{IT} + P_{strom} + P_{kylning} + P_{ljus}) / P_{IT} \]
+
+Det idealiska är att PUE-värdet blir 1. Då är det endast servrarna som använder ström. Eftersom kylningen står för 29-50\%
+av datacentrets strömförbrukning [referens] så är det den som ger mest effekt att sänka förbrukningen på.  
+
+Det finns också en rörelse att återvinna den värme som skapas så att vi använder energin till mer än datorkraft. 
+Detta kan som uppe i Boden innebära att värmen transporteras till ett intilligande växthus där den används för 
+att skapa en väztzon uppe i kallaste norden där grönsaker kan odlas året om. Förespråkare av återvinnande av 
+värmeenergin vill lägga till P\underline{atervinn} i PUE ekvationen. P\underline{atervinn} är den mängden ström 
+som skulle ha behövts användas för att värma upp växthuset till den grad som datacentret nu gör med sin värme.
+
+\[PUE = (P_{IT} + P_{strom} + P_{kylning} + P_{ljus} - P_[atervinn]) / P_{IT} \]
+
+Att tänka på vid användandet av återvinningsförbruknigen är att vi kan ha väldigt inneffektiva datacenter som visar
+bra värden eftersom P\underline{atervinn} blir stort.  Det är då viktigt att tänka på om växthuset kunnat värmas med 
+en ström/energikälla som hade varit mer miljövänlig än den strömmen som matas in i datacentret. Placeringen av växthuset
+bör vara på en sådan plats så att den extra värmen kan utnyttjas större delen av året. Annars har investeingen att koppla
+ihop de olika verksamheterna kostat både ekonomiskt och miljömässigt mer än det smakat. 
+
+\section{Analys}
 Anledningen till att en majoritet av datacenter väljer att gå på luftkylning är för att det är billigt och 
 "enkelt". Dock så finns det många olika sätt att göra luftkylningen effektivare och dyrare vilket gör att det 
 bör finnas nån punkt där det blir billigare med vattenkylning eller tvåkomponentskylning. Eftersom effekten ska
@@ -54,21 +104,10 @@ vara bättre med dessa kylelement så ska energiåtgången bli lägre på årsba
 \section{Slutsats}
 Vi får se vad jag kommer fram till efter min läsning och mina reflektioner. 
 \section{Exempel}
-Vanlig text med lite~\cite{energy3} referenser~\cite{web:pox}. Innehåller även \
+Vanlig text med lite~\cite{energy3}. Innehåller även \
 texttt{texttt}, \emph{emph}, \textit{kursiv} och \textbf{fet}. Dessutom innehåller
 den lite ``citationstecken'' och punktlistor.
 
-\begin{enumerate}
-\item Nummerlista 1.
-\item Nummerlista 2.
-\end{enumerate}
-\begin{description}
-\item[Test 1] Item 1.
-\item[Test 2] Item 2.
-\end{description}
-\subsection{En underrubrik}
-Med Figur
-\lipsum[1]
 \printbibliography
 \end{document}
 
