@@ -28,11 +28,12 @@ bidrag presenteras, ökar kunskapskraven.
 Ett datacenter är en mängd servrar som i sig är en mängd processorer och hårddiskar. 
 När dessa komponenter utför det arbete som användaren utsätter dom för skapar de värme. Denna värme kan när 
 den uppnår nog höga temperaturer skada komponenter i servrarna. Värmen kan när den blir nog hög till och med
-skapa förutsättningarna för eld. referens?. Vilket skapar ytterligare ekonomisk skada, men kan även bli fara för liv. 
+skapa förutsättningarna för eld. referens?. Vilket skapar ytterligare ekonomisk skada, men kan även bli en 
+fara för liv. 
 
-För att transportera bort den värme som skapas i servrarna behövs ett kylsystem. Kylsystemen kan till och börja med 
-delas upp i 3 olika kategorier. Kategorierna delas upp baserat på vilket tillstånd, flytande eller gas som det kylande
-ämnet är i. 
+För att transportera bort den värme som skapas i servrarna behövs ett kylsystem. Kylsystemen kan till 
+och börja med delas upp i 3 olika kategorier. Kategorierna delas upp baserat på vilket tillstånd, 
+flytande eller gas, som det kylande ämnet är i. 
 
 \begin{enumerate}
     \item Luftkylning
@@ -40,31 +41,34 @@ delas upp i 3 olika kategorier. Kategorierna delas upp baserat på vilket tillst
     \item Tvåfaskylning
 \end{enumerate}
 
-Det vanligaste sättet att kyla datacenter idag är via luftkylning. Det går till så att kyld luft transporteras genom servrarna 
-tack vare fläktar och gärna tunnelsystem för bättre riktad kylning. Benämning på den anläggning som sköter hanteringen av luften
-är CRAH (Computer Room Air Handling) \cite{modelling1}. Idealet är att konstruera ett datacenter där luften transporteras bort 
-den väg vi vill att den ska ta. Då det blir ett problem när den uppvärmda luften blandas med den kylda luften, då blir inte effekten
-av den kylda luften lika god. Därför finns det många olika nivåer på hur ett datacenter konstrueras för att se till att den uppvärmda
-luften transporteras bort från servrarna. \cite{modelling2} \cite{}
+Det vanligaste sättet att kyla datacenter idag är via luftkylning. Det går till så att kyld luft 
+transporteras genom servrarna tack vare fläktar och gärna tunnelsystem för bättre riktad kylning. 
+Benämning på den anläggning som sköter hanteringen av luften är CRAH (Computer Room Air Handling) \cite{modelling1}.
+Idealet är att konstruera ett datacenter där luften transporteras bort den väg vi vill att den ska ta. 
+Då det blir ett problem när den uppvärmda luften blandas med den kylda luften, då blir inte effekten
+av den kylda luften lika god. Därför finns det många olika nivåer på hur ett datacenter konstrueras 
+för att se till att den uppvärmda luften transporteras bort från servrarna. \cite{modelling2} \cite{}
 
-Det andra sättet är att kyla datacentret med ett flytande element. Det flytande elementet kan vara vatten men det kan också vara ett antistatiskt ämne 
-som komponenterna inte tar skada av om det skulle få kontakt. Den flytande kylningen kan via rörledningar föras tätt intill de delar i servrarna som
-skapar mest värme. Och sen via rör ledas bort från servrarna. Använts ett antistatiskt ämne så kan hela servrarna sänkas ner i ämnet för maxial kylning. 
+Det andra sättet är att kyla datacentret är med ett flytande element. Det flytande elementet kan vara 
+vatten men det kan också vara ett antistatiskt ämne som komponenterna inte tar skada av om det skulle 
+få kontakt. Den flytande kylningen kan via rörledningar föras tätt intill de delar i servrarna som
+skapar mest värme. Och sen via rör ledas bort från servrarna. Använts ett antistatiskt ämne så kan 
+hela servrarna sänkas ner i ett bad för maxial kylning. 
 
-Tvåfaskylning heter så för att det ämne som används för kylningen ändrar tillstånd från flytande till gas under kylning då det har en
-koktemperatur som understiger temperaturen på de komponenter som ska kylas. I gasform så transporteras ämnet snabbare bort till en anläggning 
-som kyle ner gasen igen och som sen transporterar ämnet åter igen till servrarna. En stor fördel med tvåkomponent är att systemet i sig skapar ett 
+Tvåfaskylning heter så för att det ämne som används för kylningen ändrar tillstånd från flytande till gas 
+under kylning då det har en koktemperatur som understiger temperaturen på de komponenter som ska kylas. 
+I gasform så transporteras ämnet snabbare bort till en anläggning som kyle ner gasen igen och som sen 
+transporteras ämnet åter igen till servrarna. En stor fördel med tvåkomponent är att systemet i sig skapar ett 
 högre tryck vilket gör att det är mindre beroende av pumpar än ett endast flytande system. referens?
 
-\begin{enumerate}
-    \item Luftkylt. Vilket är det vanligaste
-    \item Flytande kylning 
-    \item Tvåfaskylning
-\end{enumerate}
-
-För att kyla ner de ovan nämnda element så att dessa kan kyla ned CPUn behövs en kylningsenhet (CRAC) 
-och transport mellan CPUn och denna kylenhen. Kylenheten kan i sin tur ha olika teknologier för
-att kyla ner elementen. 
+Det finns att antal komponenter som kan behövas i en kylanläggning. Lite beroende på vilket metod som valts 
+att bygga upp kylanläggning i. 
+(Computer Room Air Handling) CRAH (ström, investering)
+pumpar (ström, investering)
+fläktar (ström, investering)
+rör (investering)
+Luftströmningstrummor (investering) 
+(Computer Room Air Chiller) CRAC (ström, investering)
 
 \[P_{DC} = P_{IT} + P_{strom} + P_{kylning} + P_{ljus} \]
 
