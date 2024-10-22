@@ -1,0 +1,32 @@
+**********MOLNTJÄNSTER
+metajuristic, vitkg matte för schemaläggning
+
+fördel gemensamma datacenter för alla företag:
+kommunikationen mellan företag kan bli väldigt snabb.
+grönare åtgärder blir mer effektfulla
+
+Molntjänster
+"En förflyttning av lokala tjänster till datacentret"
+
+"Tanken är att de enheter vi använder kan vara vädigt snåla på resurser. DÅ vi använder molnets resurser"
+
+SaaS, PaaS, IaaS, Service, Platform, INfrastructue
+quiz öppen en dag. kommer en omtenta på quizen efter en vecka. 
+****************************************************************
+
+Enheters hållbarhet
+
+VI har en massa utrustning som alla går igenom en produktcykel. 
+
+extrahering av material
+konstruktion av utrustning
+användningen av Utrustningen
+återvinning av utrustning
+
+****************************************************************
+
+co2e = koldioxidekvivalent. 
+
+GWP är värden. Ifall frågan kommer på ange GWP för metangas. DÅ kan frågan vara t.ex 21 co2e. 
+
+

@@ -1,0 +1,108 @@
+https://www.forbes.com/sites/christophermarquis/2020/11/16/the-cloud-isnt-inherently-more-sustainable-manage-the-environmental-impact-of-being-virtual/?sh=19e3b9e1240d
+"The New York Times published an article noting that a blog post or e-book could potentially have a larger carbon footprint than its printed counterpart because of the ‘always on’ nature of digital media. That was an eye-opener,” Frick says. “Pixels require electricity, and most of that energy, even in 2020, is still powered by fossil fuels.” "
+
+Virtualisering innebör bättre resursallokering. Lättare att
+expandera, lättare för outsourcing. Outsourcing kan ske till ett mer klimatvänlkig datacenter t.ex. Resursallokeringen innebär att resurser som inte används så mycket kan stängas av för att man kan flytta enheter från dessa resurser till andra resurser. EN resurs som inte används så mycket men som står idle drar fortsatt mycket energy. 
+
+Säkerhet:
+VId virtualiseing så tillkommer ett lager av säkerhet. Blir en applikation infekterad så är hårdvaran som den använder virtualiserad. Det blir så svårare att komma åt t.ex databasen ifall webbapplikationen är hackad. Då databasen är på en egen virtuell maskin. Det finns dock möjligheter för en hackare att ta sig ut ur en virtuell maskin. Detta så alla virtuella maskiner på en fysisk server delar på samma fysiska minnen så finns de där utrymme för hackaren att läsa det fysiska minnet för att få tillgång till det hostande operativsystemet.  
+Ovan kallas för en VM escape. Så låt dig inte helt luras över att en virutell maskin är het säker. 
+
+Resursallokering:
+Det blir enklare att flytta fysisk plats på servrarna. 
+
+Kloning:
+KLoning av servrar blir enklare. Vilken är den del av att flytta servrar. 
+
+Olika metoder för virtualisering:* ** 
+Sandboxing (säkerhet):
+Appliktioner kn inte komma åt varandras data (är de säkert?) (Container)
+
+Network namespaces:
+Delar hårdvaran men emulerar större delar av operativsystem (Docker)
+
+Virtuella maskiner:
+Emulerar all hårdvara, flera operativsystem kan köras samtidigt. Blir mer resursintensivt. (Vmware, Virtual box)
+
+Med virtuwaliering blir det även möjlkgt att virtualisera all krignutsurtning. ROutrar, switchar etc. Hur fungerar de ti prkatiken? 
+
+"Linux works with namespace. These are the same namespaces that form the underlying technology of containers. "
+
+Eftersom man kan virtullisera utrustning så finns de krävs det mindre fysiskt utrustning. Som vi vet så är själva produktionen av utrustningen en stor del av kostaden i kronor och co2e-utsläpp i utrusntingen så vi gör möjightvis en halvering i kostnad för miljön i att ej tillverka utrustningen. 
+
+Fördelen med att koncentrera mycket av beräknings och minneskraften i stora datacenter så kan vi få till en homogenare utrutningen. EN homogenera utrustningen är enklare att skapa återvinningsprocesser för. En såkallad grön upphandling får också större genomslagskraft. 
+
+En annan fördel som kanske kan vara ltie svår i praktiken att få helt genomslag på. Men de är ifall många företag samlas i samma datacenter så blir avståndet för kommunikationen mellan företagen mindre. Mindre energi går åt i kommunikationen och den går snabbare. 
+
+Placering av datacenter kan också göras där det drar nytta av omkringliggande energikälla. Kyligt område för kylning, bra område för grön energiproduktion. Norrland i ett nötskal.
+
+****Cloud Computing. Vad betyder det? 
+Förflyttning av förvaring, beräkning och tjänster till INternet. Istället för att det ska ligga lokalt hos användaren. Detta sparar energi och produktionskostnader. Då användarens enheter kan gå närmare att endast vara monoitorer än att vara smarta. Smartheten läggs i molnet istället. (Googles chrome book)
+
+Cloud computing är uppdelat i tre olika kategorier. 
+IaaS - Infrastrucute as a Service
+PaaS - Platform as a Service (operativsystem, utvecklingsverktyg, databashantering, företagsanalys etc...)
+SaaS - Service as a Service (appar, program etc. )
+
+Molnet kan placeras på tre olika sätt. 
+Privat: Molnet ligger fysiskt on-site. (skillnad mot en traditionell server?)
+Offentliga/Public: Molnet hyrs in från en molnleverantör
+Hybrid: Kombination av båda alternativen. 
+
+Datacenter kan helt enkel bättre styras till att bli hållbarare. MEn det är också viktigt att det görs. Ett datacenter som läggs väldigt mycket resurser på. Placeras resurserna felaktigt på ett ej hållbart sätt så blir konsekvenserna att vi får leva med ett ohållbart datacenter under lång tid. 
+
+En fördel med datacenter och virtualisering är att mindre funkionalitet behövs i hårdvaran. Kraften läggs på minnena och att ha bra beräkningskomponenter. Eftersom de är dom som emulerar resterande hårdvara. 
+
+*******************************
+Mycket utrustning behövs för att driva IT. VÄrlden drivs idag av IT... 
+Varje produkt går igenom en produktcykel. FInns många olika delmoment men i dessa kursen delas produkten livscykel in i 4 delar. 
+* Exrahering och behandling av materialet
+* Konstruktion av produkten
+* Användning av produkten
+* Återvinning/Destruering av produkt. 
+
+Konsturktionen::::
+Exempel: En dator kräver 
+* 250kg co2e 
+* 22kg kemikaleier
+* 1.5ton vatten
+när den byggs. Ingen större förändring har skett här på senaste tiden. Detta som varit en stor kritik mot t.ex elbilar också. Att tillverkningen av batterierna är väldigt resurskrävande. Resurser som ej är miljövänliga. 
+
+Användingat::: 
+Energinvänding orsakar co2e-utsläpp. Men man kan påverka det genom att använda grön el. 
+EN dator med effekt 65W som används 8h/dag
+= 190kWh per år
+El i norden har ca 125g co2e per kwh
+Datorn produceras därför 24hg co2e/år. Mycket värre i andra länder där energiskandet kan vara mer beroende av fossila resurser. Kolkraftverk, naturgas... 
+
+Datacenter ligger på en annan nivå. Facebook i Luleå = 55TWh/år = 55 000 000 000 Wh/år
+= 6 875 000 000 kg co2e /år
+= 6Gton co2e/år
+
+Andra exempel. Ifall du skicka 2000 mail/år. Låt oss säga att mailen inte innehåller massa filer så de är endast text. 
+Det blir ändå 0.3g/mailet
+ 0.3g*2000 = 6000g = 6kg co2e/år
+ ENDAST FÖR ATT SKICKA MAIL!!!! 
+
+ Medel svensson står för ca 8800kg co2e/år
+ En del av detta utsläpp är pga IT. 
+
+ Globala benämning på ITutrustning när de kommer till sista steget, återvinnning och destruering är 
+ WEEE - Waste electrical and electronic equipment
+
+ Inom EU är
+ 13.5 miljoner ton WEEE added to the market
+ 4.9 miljoner ton WEEE uppsamlas
+ 11kg WEEE per person
+
+ ROHS diretivet finns medbakat i WEEE hanteringen. (De handlar inte bara om bly i produkterna...)
+ROHS sätter restriv på följande 10 substanser att användas i elektronik:
+Bly, Kadmium, Kvicksilver, Sexvärt krom, Polybromerade bifenyler, Polybromerade difenyletrar, butylbensylftalat, 
+dibutylftalat, diisobutylftalat
+
+REACH - styr hur industrier hanterar de kemikalier som de tar in. KOnsumenterna har rätt att veta vilka kemikalier som den köpta produkten innehåller. 
+
+WEEE, Reach, ROHS
+Återvinning av elektronisk waste återfinns inom ISO 14001 miljöledningssystemstandard. 
+
+RLabel är ett certifiering organ av många. t.ex 
