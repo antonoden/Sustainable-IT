@@ -28,5 +28,7 @@ användningen av Utrustningen
 co2e = koldioxidekvivalent. 
 
 GWP är värden. Ifall frågan kommer på ange GWP för metangas. DÅ kan frågan vara t.ex 21 co2e. 
+GWP = Global warming potential
+
 
 
