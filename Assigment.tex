@@ -1,3 +1,4 @@
+
 \documentclass[conference,a4paper]{IEEEtran}
 \usepackage{graphicx,caption,subfig,amsmath,array,lipsum}
 \usepackage[backend=biber]{biblatex}
@@ -17,29 +18,28 @@ som skapas. Vätskekylning är ett komplement som kan vara ett måste i högpres
 det går även att ta det ett steg längre och sänka ner hela servrarna i kylarvätska. Huvudspåret bör alltid vara att få ett så effektivt utnyttjande 
 av energi som möjligt.  
 \end{abstract}
-\section{Introduction}
+\section{Introduktion}
 Människan gör sig allt mer beroende av digitala hjälpmedel. Utvecklingen har skett på mindre än en mansålder 
-och har ökat exponentiellt. Det är egentligen väldigt svårt att förutspå hur mycket vi kommer använda oss av och hur beroende vi kommer vara av 
-digitala medel i framtiden.
+och det är egentligen väldigt svårt att förutspå hur beroende vi kommer vara av i framtiden.
 
-För att det digitala systemet ska fungera som vi förväntar oss, är vi beroende av datacenter. Därför har antalet datacenter i Europa ökat med 5\% per år
+För att det digitala systemet ska fungera som vi förväntar oss, finns ett behov av datacenter. Därför har antalet datacenter i Europa ökat med 5\% per år
 mellan 2017 och 2022 ~\cite{marketoverview1}. Under åren 2020 till 2022 så påskyndandes utvecklingen tack vare Covid19-pandemin, som gjorde att många 
 behövde kunna arbeta hemifrån, vilket ställde högre krav på fungerande system. Det senaste året har fokuset skiftat till AI, men vilken anledning det än 
 är till att datacenter byggs ut, så sker det i en snabb takt. 
 
 Datacenter behöver elektrisk energi för att operera. Operationerna omvandlar den elektriska energin till värmeenergi. För att servrarna ska fortsatt operera behöver 
-värmeenergin transporteras bort, vilket kan ske på olika sätt. I ett luftkylt datacenter kan kylningen stå för 40\% av strömförbrukningen vilket ger PUE-värden närmare 2.0 
-~\cite{modelling2}\cite{energy3}, medans modernt uppbyggda datacenter som exempelvis Metas datacenter i Luleå ~\cite{META}, presenterar PUE-värden så låga som 
+värmeenergin transporteras bort, vilket kan ske på olika sätt. I ett luftkylt datacenter kan kylningen stå för 40\% av strömförbrukningen vilket ger PUE-värden närmare 2.0
+~\cite{modelling2,energy3}. Modernt uppbyggda datacenter som exempelvis Metas datacenter i Luleå \cite{META}, presenterar PUE-värden så låga som 
 1.09. Enligt dom själva är detta tack vare gratis kylning och tillförlitlig strömdistribution. Detta visar att planerad kylning i kombination med 
-lokalisering av datacenter bidrar till en mer effektiv energianvändning. \cite{PUE} Uptime institue presenterade 2022 att det genomsnittliga rapporterade PUE-värdet låg på
-1.55. 
+lokalisering av datacenter bidrar till en mer effektiv energianvändning. Uptime institue presenterade 2022 att det genomsnittliga rapporterade PUE-värdet låg på
+1.55. \cite{PUE} 
 
 \section{Bakgrund}
 För att få en matematisk förståelse över ett datacenters strömförbrukning så delas de olika strömförbrukarna upp \cite{modelling2}. Strömförbrukningen 
 av servrarna kan benämnas P\textsubscript{IT}, kylningsanläggningen P\textsubscript{kylning}, strömdistribuering P\textsubscript{strom} 
 och övrig förbrukning för att bland annat hålla lokalerna trivsamma för arbetarna, P\textsubscript{ljus}. För att sedan jämföra datacentrets strömförbrukning med 
 fokus på de delar som inte har med servrarnas arbete att göra så divideras alla förbrukningar med P\textsubscript{IT}. Vi får av detta ut ett PUE-värde 
-(Power usage effectiveness) där det idealiska är att PUE-värdet blir 1.0.
+(Power Usage Effectiveness) där det idealiska är att PUE-värdet blir 1.0.
 \begin{equation}
     PUE = \frac{P_{IT} + P_{strom} + P_{kylning} + P_{ljus}}{P_{IT}}    
 \end{equation}
@@ -48,44 +48,43 @@ När dessa komponenter arbetar så omvandlas elektrisk energi till värmeenergi.
 ett system för kylning för att transportera bort denna värme.
 \subsection{Luftkylning}
 Det vanligaste sättet att kyla datacenter är via luftkylning. Det går till så att kyld luft 
-riktas genom servrarna med hjälp av fläktar ~\cite{modelling2}~\cite{modelling1}. Luften värms upp av de varma servrarna och leds vidare till en anordning som kyler den. 
-Därifrån leds sedan den kylda luften tillbaka mot servrarna. Detta görs via fläkt-och tunnelsystem.
+riktas genom servrarna med hjälp av fläktar~\cite{modelling2,modelling1}. Luften värms upp av de varma servrarna och leds vidare till en anordning som kyler den. 
+Därifrån leds sedan den kylda luften tillbaka mot servrarna. Detta görs via fläkt- och tunnelsystem.
 \subsection{Flytande kylning}
-Ett annat sätt att kyla datacentret är med ett flytande ämne ~\cite{energycompare2}. Vatten är det mest vanliga. Men det finns många andra kylmedel så 
+Ett annat sätt att kyla datacentret är med ett flytande ämne ~\cite{energycompare2}. Vatten är det mest vanliga, men det finns många andra kylmedel så 
 som t.ex HFC134a eller HFO1234ze. Vätskan kan via ledningar föras tätt intill de delar i servrarna som skapar mest värme, eller användas för att kyla ned den 
-luft som i sin tur genomför den direkta kylningen. Vätskan värms upp och pumpas sedan bort för att åter kylas. En flytande vätska 
-blir beroende av pumpar och bibehållet tryck i ledningsystemet. Använts ett antistatiskt kylmedel \cite{immersioncooling1} så kan hela servrarna sänkas ner i ett 
-bad av kylmedel.  
+luft som i sin tur genomför den direkta kylningen. Uppvärmd vätska pumpas bort och ny kyld vätska tillförs. En flytande vätska 
+blir beroende av pumpar och bibehållet tryck i ledningsystemet. Används ett antistatiskt kylmedel~\cite{immersioncooling1} så kan hela servrarna sänkas ner i ett 
+bad av kylmedel. Kylmedel har en påverkan på klimatet, de exempel nämnda ovan har ett GWP-värde (Global Warming Potential)~\cite{GWP}.
 \subsection{Tvåfaskylning}
 Tvåfaskylning heter så för att det ämne som används för värmetransport ändrar tillstånd från flytande till gas. Detta då ämnets gastemperatur är lägre 
 än temperaturen på de varma komponenterna. I gasform transporteras kylmedlet till en kondensator som kyler ner gasen igen och sedan pumpas samma kylmedel tillbaka igen, 
-nu i flytande form.  
+nu i flytande form~\cite{energycompare2}.  
 \subsection{Gratis kylning}
 Vi kan utnyttja kylan i luften eller vattnet (massa) utanför datacentrets byggnad, genom att ta in massa i vårt system eller låta massan transportera bort värme från vårt slutna 
-system. Samma mängd massa som tas in måste dock kunna avlägnas, men en fördel är att den luft eller vatten som avlägsnas kan återvinnas.
+system ~\cite{free-cooling2}. Samma massa som tas in måste dock kunna avlägnas, men en fördel är att den luft eller vatten som avlägsnas kan återvinnas.
 \subsection{Återvunnen energi}
 Det går att återanvända värmeenergin, för att få ytterligare effektivitet. Detta kan som i Boden \cite{free-cooling1} innebära att värmen transporteras 
 till ett intilligande växthus. Där skapar den en växtzon uppe i kallaste norden, där grönsaker kan odlas året om. 
 \begin{equation}
     PUE = \frac{P_{IT} + P_{strom} + P_{kylning} + P_{ljus} - P_{atervinn}}{P_{IT}}
 \end{equation}
-Vid återvinning av värmeenergin\cite{modelling2} subtraheras strömåtgången med P\textsubscript{atervinn} i PUE ekvationen. P\textsubscript{atervinn} är den mängden ström 
+Vid återvinning av värmeenergin~\cite{modelling2} subtraheras strömåtgången med P\textsubscript{atervinn} i PUE ekvationen. P\textsubscript{atervinn} är den mängden ström 
 som skulle behövts användas för att till exempel värma upp växthuset i Boden utan datacentrets värme. Detta skulle teoretiskt sett kunna ge
 ett PUE-värde under 1.
 
 \section{Analys}
-En fördel med luftkylning är att det är det vanligaste kylningsanläggningen och delvis därför enklare att underhålla \cite{coolingcompare1}. 
+En fördel med luftkylning är att det är den vanligaste kylningsanläggningen och delvis därför enklare att underhålla~\cite{coolingcompare1}. 
 En trasig fläkt är mer normalt för en operatör att byta ut än pumpar, rör och slangkopplingar i ett vätskesystem. Vätskesystemet behöver pågrund av läckrisken mer övervakning 
 vilket också blir en kostnad utöver utbildning.
 
-En nackdel med luft är att \cite{modelling2} anläggningen för att kontrollera luftflödet tar upp väldigt mycket plats. \cite{thermalconduct} Eftersom lufts värmeledningsförmåga 
-är 23ggr mindre jämfört med vattnet så blir det mycket mer massa som behöver transporteras. Detta gör att transportrummet för luft måste ha större dimensioner än för vatten.
-
+En nackdel med luft är att anläggningen för att kontrollera luftflödet tar upp väldigt mycket plats \cite{modelling2}. Eftersom lufts värmeledningsförmåga 
+är 23ggr mindre jämfört med vattnet \cite{thermalconduct} så blir det mycket mer massa som behöver transporteras. Detta gör att transportrummet för luft måste ha större dimensioner än för vatten.
 Andra nackdelar med luftkylning är dess relativa höga ljudnivå ~\cite{immersioncooling1}, att den relativa luftfuktigheten behöver hanteras och att dess värmeavledningsförmåga
 kan överstigas vid högre koncentration av energi.
 
 För att undvika att behöva kyla ner all luft med element (CRAC) \cite{energy3} som kan bli 40\% av datacentrets strömförbrukning \cite{heatexchange1}, kan luft 
-tas in utifrån \cite{free-cooling2}. Detta kräver en utbyggd anläggningen för att rengöra den inkommande luften på partiklar och ge den rätt luftfuktighet. 
+tas in utifrån \cite{free-cooling2}. Detta kräver en utbyggd anläggning för att rengöra den inkommande luften på partiklar och ge den rätt luftfuktighet. 
 På detta sätt kan förbrukningen sänkas med 45\%.
 
 Även vatten kan tas in utifrån men då finns det mer regleringar på mängden insamlat vatten som behöver följas \cite{liqcool2}. Vid användande av vattenmagasin kan vatten 
@@ -93,14 +92,12 @@ samlas när den är tillgänglig eller när det är billigare att kyla den. Sen 
 få ner våra kostnader för kylning.
 
 När de kommer till vätskekylning så kan en högre precision på kylningen nås \cite{energycompare2} genom att föra vätskorna nära komponenterna. Om vatten används så finns en risk  
-för läckor som är skadliga \cite{liqcool1}. Därför är det en fördel att använda sig av antistatiska vätskor även om läckor ska undvikas även då. Riskerna sänks och därmed 
-underhållskostnaden. Flera av de kylmedel som används som t.ex HFC134a kan kännas igen från de AC system som används för att kyla ner kupén i bilar. 
-\cite{GWP} Kylmedel har GWPvärden vilket gör att det är viktigt att välja rätt, då det precis som på bilar kan uppstå läckor. Till exempel har 
-kylmedel som HFC134a har en co2e på 1300.    
+för läckor som är skadliga för de elektriska komponenterna \cite{liqcool1}. Därför är det en fördel att använda sig av antistatiska vätskor ifall kylningen är komponentnära. 
+Riskerna sänks och därmed underhållskostnaden. Men läckor ska undvikas även med kylmedel eftersom dessa vätskor  generellt bidrar till växthuseffekten. Flera av de kylmedel 
+som används har ett GWP-värde, som t.ex HFC134a på 1470 \cite{GWP1}. Vilket gjort att de blir förbjudna i framtiden inom både EU~\cite{EUphase}. Därför är det viktigt att välja rätt. 
 
 Pågrund av kylmedlens höga precision och lägre beroende av yta så är de ett bra komplement på högpresterande enheter. Då mycket utveckling just nu sker för att 
-få fram de snabbaste AI kretsarna så kan strömförbrukning toppa i närtid och det kan ta tid innan Koomeys lag kommer in och 
-korrigerar detta \cite{Koomey}, kanske aldrig om datacentret vill fortsätta ha den senaste tekniken med fokus på prestanda. 
+få fram de snabbaste AI kretsarna så kan energikoncentrationen öka snabbt i närtid, speciellt då datacentret vill erbjuda den senaste tekniken med fokus på prestanda inom AI. 
 
 Tvåfaskylning är en annan nisch av kylmedel. En fördel med tvåfaskylning är att det i gasform transporterar sig på självtryck. Vi får därför en lägre 
 strömkostnad för pumpar vilket är en betydlig del i vätskesystem. En tvåfaskylning kan kombineras med en lösning där serverutrustningen är nedsänkt i 
@@ -112,13 +109,13 @@ När det kommer till att återvinna energin har vi sett exempel på att energin 
 intilliggande byggnaders \cite{reuse1} värmesystem kan kopplas ihop. Fördelen med vatten är att den är en bättre tranportör av värme. 
 Dessutom så används vatten i våra byggnaders värmesystem redan vilket gör det till ett bra element att koppla ihop med datacenters vätskesystem. Därför blir vattnet i kombination 
 med gratis luftkylning en effektiv energilösningen. För att minska underhållskostnad i oro för vattenläcka så bör vattenkylda dörrar som monteras på serverrackarna 
-nyttjas som den varma luften får transporteras genom för att värma upp vattnet. På detta sätt har en superdator på KTH värmt upp intillliggande labbsalar.  
+nyttjas som den varma luften får transporteras genom för att värma upp vattnet. På detta sätt har en superdator på KTH värmt upp intillliggande labbsalar~\cite{reuse1}.  
 \section{Slutsats}
-Denna artikel har redovisat kylsystem för luftkylning, flytande kylning och tvåfaskylning. Matematiska formler har visat hur det går att benchmarka ett datacenter enligt PUE och 
-genom att titta på gratis kylning kunnat se att PUE-värdet kan sänkas drastiskt. Utnyttjandet av gratis kylning kräver ytterligae infrastrukur för att ta tillvara på denna resurs. 
-För att ytterligare sänka data centrets energiavtryck kan återvinningsmöjligheter av energin planeras in genom att värma upp intilliggande byggnader. Denna artikel ger läsaren en 
-bättre förståelse för hur ett datacenter kan kylas och att framtiden kräver en mer effektivt utnyttjande av energin där gratis kylning utnyttjas och vätskekylningens energi återvinns. 
+Denna artikel har redovisat kylsystem för luftkylning, flytande kylning och tvåfaskylning. Matematiska formler för att visa på hur effektivt datacentret använder strömmen enligt 
+PUE har presenterats och genom att titta på gratis kylning kunnat se att PUE-värdet kan sänkas drastiskt. Utnyttjandet av gratis kylning kräver ytterligae infrastrukur för att ta 
+tillvara på denna resurs. För att ytterligare sänka data centrets energiavtryck kan återvinningsmöjligheter av energin planeras in genom att värma upp intilliggande byggnader. 
+Denna artikel ger läsaren en bättre förståelse för hur ett datacenter kan kylas och att framtiden kräver en mer effektivt utnyttjande av energin där gratis kylning utnyttjas och 
+vätskekylningens energi återvinns. 
 
 \printbibliography
 \end{document}
-
